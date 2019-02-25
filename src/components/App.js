@@ -1,17 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import SearchBar from './SearchBar';
 
-const App = () => {
-  return (
-    <div className="ui container" style={{ marginTop: '1rem' }}>
-      <SearchBar/>
-    </div> 
-  );
-};
+class App extends Component {
 
-App.propTypes = {
+  onSearchSubmit(term) {
+    console.log(term);
+  }
 
-};
+  render() {
+    return (
+      <div className="ui container" style={{ marginTop: '1rem' }}>
+        <SearchBar onSubmit={this.onSearchSubmit}/>
+      </div> 
+    );
+  }
+}
 
 export default App;
