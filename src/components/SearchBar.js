@@ -6,7 +6,7 @@ export class SearchBar extends Component {
     term: ''
   };
 
-  propTypes = {
+  static propTypes = {
     onSubmit: PropTypes.func,
   };
 
